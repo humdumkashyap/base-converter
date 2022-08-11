@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: no-repeat fixed url(bgimage.jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+}
+.container {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+}
+.container .group {
+  padding: 50px;
+  background: linear-gradient(
+    60deg,
+    rgba(17, 172, 194, 0.5575980392156863) 0%,
+    rgba(138, 55, 170, 0.6136204481792717) 29%,
+    rgba(115, 103, 223, 0.4231442577030813) 72%,
+    rgba(0, 255, 240, 0.5379901960784313) 100%
+  );
+  box-shadow: 2px 4px 8px rgba(75, 75, 75, 0.555);
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  border-radius: 18px;
+}
+.group {
+  margin: auto;
+}
+.group.hidden {
+  display: none;
+  margin: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+form input:placeholder-shown {
+  padding-left: 10px;
+}
+form input,
+form select {
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 18px;
+  padding: 8px 10px;
+  box-shadow: 2px 4px 8px rgba(75, 75, 75, 0.555);
+  font-weight: 700;
+}
+form input:hover,
+form select:hover {
+  transition: 0.4s;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+form select {
+  padding: 7px 6px;
+}
