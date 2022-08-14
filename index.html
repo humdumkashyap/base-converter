@@ -2,44 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base Conversor</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Base Converter</title>
+
+    <link rel="stylesheet" href="mainstyle.css" />
   </head>
+
   <body>
-    <div class="container">
-      <div class="group">
-        <h2>Number System Converter</h2>
-        <form action="">
-          <label for="Number">
-            <input
-              type="text"
-              id="Number"
-              placeholder="Enter a Number:"
-              required
-            />
-          </label>
-          <p>Choose the Typed Base:</p>
-          <select id="base">
-            <option value="2">Binary</option>
-            <option value="8">Octal</option>
-            <option value="10">Decimal</option>
-            <option value="16">Hexadecimal</option>
-          </select>
-        </form>
+    <main>
+      <h1>Base Converter</h1>
+
+      <div id="select-container">
+        <select id="from-select">
+          <option value="from-select">Select</option>
+          <option value="from-binary">Binary</option>
+          <option value="from-octal">Octal</option>
+          <option value="from-decimal">Decimal</option>
+          <option value="from-hexadecimal">Hexadecimal</option>
+        </select>
+        <span>To</span>
+        <select id="to-select">
+          <option value="to-select">Select</option>
+          <option value="to-binary">Binary</option>
+          <option value="to-octal">Octal</option>
+          <option value="to-decimal">Decimal</option>
+          <option value="to-hexadecimal">Hexadecimal</option>
+        </select>
       </div>
-      <div class="group hidden">
-        <h2>Results</h2>
-        <div class="base2"></div>
-        <div class="base8"></div>
-        <div class="base10"></div>
-        <div class="base16"></div>
+
+      <div id="input-container">
+        <input type="text" id="from-input" placeholder="Select" />
+        <span id="error"></span>
       </div>
-    </div>
-    <script src="main.js"></script>
+
+      <button id="convert-button">Convert</button>
+
+      <input type="text" id="to-input" placeholder="Select" readonly />
+    </main>
+
+    <script src="mainscript.js"></script>
   </body>
 </html>
